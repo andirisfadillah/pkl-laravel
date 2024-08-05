@@ -1,0 +1,38 @@
+body {
+    background-color: #000;
+color: rgb(253, 244, 244);
+font-family: sans-serif;
+padding: 10px;
+}
+
+a{
+    color: antiquewhite;
+    text-decoration: no;
+}
+
+a:hover {
+    color: white;
+    text-align: underline;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+}
+
+.navbar li a{
+    padding: 10px;
+    display: inline-block;
+}
+
+.alert{
+    background: indigo;
+    color: white;
+    padding: 10px ;
+    border-radius: 10px;
+}
+
+.alert header{
+    background: khaki;
+    color: #000;
+}
