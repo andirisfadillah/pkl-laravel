@@ -36,6 +36,8 @@
         <!-- Main Sidebar Container -->
         @include('sidebar')
 
+        
+
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Main content -->
@@ -85,6 +87,30 @@
     <script src="{{ asset('latianedit/dist/js/demo.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('latianedit/dist/js/pages/dashboard.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+    
+        $(function(){
+        $(document).on('click','#delete',function(e){
+            e.preventDefault();
+            var link = $(this).attr("href");
+    
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect to the link if confirmed
+                    window.location.href = link;
+                }
+            });
+        });
+    });
 </body>
 
 </html>

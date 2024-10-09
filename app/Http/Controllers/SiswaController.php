@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class SiswaController extends Controller
 {
     public function index () {
-        $siswa=Siswa::get();
+        $siswa=Siswa::all();
+        
         return view('siswa.index', compact('siswa'));
     }
     public function create() {
